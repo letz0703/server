@@ -6,9 +6,11 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/index.ts",
+    "start_old": "ts-node src/index.ts",
+    "start": "tsc && node dist/index.js",
     "typecheck": "tsc --noEmit",
-    "build": "tsc",
+    "build": " tsc",
+    "deploy": "gh-pages -d build",
     "format": "prettier --write src/**/*.ts"
   },
   "keywords": [],
